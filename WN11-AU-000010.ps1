@@ -25,4 +25,5 @@
     Example syntax:
     PS C:\> .\__remediation_template(STIG-ID-WN11-AU-000010).ps1 
 #>
+
 auditpol /set /subcategory:"Credential Validation" /failure:enable
