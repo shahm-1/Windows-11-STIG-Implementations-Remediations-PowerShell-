@@ -25,9 +25,7 @@
     PS C:\> .\__remediation_template(STIG-ID-WN11-CC-000090).ps1 
 #>
 
-New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Group Policy" -Force | Out-Null
-Set-ItemProperty `
-  -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Group Policy" `
-  -Name "DisableBkGndGroupPolicy" `
-  -Type DWord `
-  -Value 0
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}" -Force | Out-Null
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}" `
+  -Name "NoGPOListChanges" -Type DWord -Value 0
+
